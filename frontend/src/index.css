@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Design tokens — single source of truth */
+:root {
+  --saffron:  #F97316;
+  --maroon:   #7C1D2E;
+  --ivory:    #FAF7F2;
+  --charcoal: #1C1C1E;
+  --gold:     #C9A84C;
+  --transition: all 200ms ease-in-out;
+}
+
+* { transition: var(--transition); }
+
+body {
+  background-color: var(--ivory);
+  color: var(--charcoal);
+  font-family: 'Inter', sans-serif;
+}

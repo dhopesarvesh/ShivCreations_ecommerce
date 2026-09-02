@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Shiv's Creations logo">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff9f1"/>
+      <stop offset="100%" stop-color="#f4ead8"/>
+    </linearGradient>
+    <linearGradient id="petal" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f7c96b"/>
+      <stop offset="100%" stop-color="#d67c34"/>
+    </linearGradient>
+    <linearGradient id="petalDark" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#a42b44"/>
+      <stop offset="100%" stop-color="#6d1429"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="128" height="128" rx="26" fill="url(#bg)"/>
+  <circle cx="64" cy="64" r="50" fill="#fffdf8" stroke="#d7b568" stroke-width="4"/>
+
+  <g transform="translate(64 64)">
+    <g fill="url(#petal)" stroke="#7e2a38" stroke-width="2">
+      <ellipse cx="0" cy="-24" rx="12" ry="22" transform="rotate(0)"/>
+      <ellipse cx="0" cy="-24" rx="12" ry="22" transform="rotate(45)"/>
+      <ellipse cx="0" cy="-24" rx="12" ry="22" transform="rotate(90)"/>
+      <ellipse cx="0" cy="-24" rx="12" ry="22" transform="rotate(135)"/>
+      <ellipse cx="0" cy="-24" rx="12" ry="22" transform="rotate(180)"/>
+      <ellipse cx="0" cy="-24" rx="12" ry="22" transform="rotate(225)"/>
+      <ellipse cx="0" cy="-24" rx="12" ry="22" transform="rotate(270)"/>
+      <ellipse cx="0" cy="-24" rx="12" ry="22" transform="rotate(315)"/>
+    </g>
+
+    <g fill="url(#petalDark)" opacity="0.9">
+      <circle cx="0" cy="0" r="16"/>
+      <circle cx="0" cy="-34" r="7"/>
+      <circle cx="24" cy="-24" r="7"/>
+      <circle cx="34" cy="0" r="7"/>
+      <circle cx="24" cy="24" r="7"/>
+      <circle cx="0" cy="34" r="7"/>
+      <circle cx="-24" cy="24" r="7"/>
+      <circle cx="-34" cy="0" r="7"/>
+      <circle cx="-24" cy="-24" r="7"/>
+    </g>
+
+    <circle cx="0" cy="0" r="8" fill="#f8f3eb" stroke="#7e2a38" stroke-width="2"/>
+  </g>
+</svg>
