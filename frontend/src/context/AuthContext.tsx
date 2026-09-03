@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import { authApi } from '../features/auth/auth.api'
+import { fetchFromApi } from '../services/api'
 
 export interface UserAccount {
   id: number
@@ -13,6 +14,7 @@ interface AuthContextValue {
   token: string | null
   login: (email: string, password: string) => Promise<boolean>
   signup: (name: string, email: string, password: string) => Promise<boolean>
+  updateProfile: (name: string, email: string, currentPassword: string, newPassword: string) => Promise<{ success: boolean; error?: string }>
   logout: () => void
 }
 
@@ -76,6 +78,25 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         return true
       } catch {
         return false
+      }
+    },
+    updateProfile: async (name, email, currentPassword, newPassword) => {
+      if (!token) return { success: false, error: 'You must be logged in.' }
+
+      try {
+        const updatedUser = await fetchFromApi<UserAccount>('/users/me', {
+          method: 'PUT',
+          body: JSON.stringify({
+            name,
+            email,
+            current_password: currentPassword || undefined,
+            new_password: newPassword || undefined,
+          }),
+        }, token)
+        setUser(updatedUser)
+        return { success: true }
+      } catch (error) {
+        return { success: false, error: error instanceof Error ? error.message : 'Unable to update profile.' }
       }
     },
     logout: () => {

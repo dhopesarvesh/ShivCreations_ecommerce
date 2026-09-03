@@ -163,7 +163,7 @@ export default function Navbar() {
             </IconButton>
           )}
 
-          <IconButton label={user ? 'Profile' : 'Log in'} onClick={() => navigate(user ? '/profile' : '/account')}>
+          <IconButton label={user ? 'Profile' : 'Log in'} onClick={() => navigate(user ? (user.role === 'admin' ? '/admin/profile' : '/profile') : '/account')}>
             <User size={20} />
           </IconButton>
 

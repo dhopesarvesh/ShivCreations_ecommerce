@@ -32,6 +32,7 @@ export default function AppRoutes() {
             <Route path="/about" element={<PublicRoute><AboutPage /></PublicRoute>} />
             <Route path="/account" element={<AuthPage />} />
             <Route path="/profile" element={<UserRoute><ProfilePage /></UserRoute>} />
+            <Route path="/admin/profile" element={<AdminRoute><ProfilePage /></AdminRoute>} />
             <Route path="/orders" element={<UserRoute><OrdersPage /></UserRoute>} />
             <Route path="/cart" element={<ProtectedRoute><CartPage /></ProtectedRoute>} />
             <Route path="/admin" element={<AdminRoute><AdminDashboardPage /></AdminRoute>} />

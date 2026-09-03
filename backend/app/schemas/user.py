@@ -28,3 +28,10 @@ class UserOut(UserBase):
     id: int
     role: str
     is_active: bool
+
+
+class UserProfileUpdate(BaseModel):
+    name: str
+    email: EmailStr
+    current_password: str | None = None
+    new_password: str | None = None

@@ -12,8 +12,6 @@ const footerLinks = {
   ],
   'Company': [
     ['About Us', '/#about'],
-    ['Blog', '/#blog'],
-    ['Careers', '/#careers'],
   ],
 }
 
