@@ -1,7 +1,20 @@
 const footerLinks = {
-  'Quick Links': ['Home', 'Shop All', 'Festivals', 'New Arrivals', 'Sale'],
-  'Support': ['FAQ', 'Shipping Policy', 'Return Policy', 'Track Order', 'Contact Us'],
-  'Company': ['About Us', 'Blog', 'Careers', 'Press', 'Terms of Use'],
+  'Quick Links': [
+    ['Home', '/'],
+    ['Shop All', '/'],
+    ['Festivals', '/flowers'],
+    ['New Arrivals', '/'],
+    ['Sale', '/'],
+  ],
+  'Support': [
+    ['FAQ', '/#faq'],
+    ['Contact Us', 'mailto:hello@shivcreations.com'],
+  ],
+  'Company': [
+    ['About Us', '/#about'],
+    ['Blog', '/#blog'],
+    ['Careers', '/#careers'],
+  ],
 }
 
 export default function Footer() {
@@ -97,10 +110,10 @@ export default function Footer() {
                 {heading}
               </h4>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                {links.map((link) => (
-                  <li key={link}>
+                {links.map(([label, href]) => (
+                  <li key={label}>
                     <a
-                      href="#"
+                      href={href}
                       style={{
                         fontSize: '13px',
                         color: 'rgba(250,247,242,0.6)',
@@ -110,7 +123,7 @@ export default function Footer() {
                       onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--ivory)' }}
                       onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(250,247,242,0.6)' }}
                     >
-                      {link}
+                      {label}
                     </a>
                   </li>
                 ))}
